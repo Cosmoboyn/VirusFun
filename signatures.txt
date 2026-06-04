@@ -1,0 +1,1 @@
+getclipboard,keylogger,stealpasswords,getcookies,filesearch,uploadfile,recordaudio,capturescreen,recordvideo,gpslocation,turncameraon,openbackdoor,executecode,downloadandexec,uninstall,selfdestruct,changeproxy,ddos,spamsend
