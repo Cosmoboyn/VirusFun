@@ -3,126 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Скачать Мой Антивирус</title>
+    <title>Центр загрузки VirusFun – Официальный сайт</title>
     <style>
-        * {
+        /* Стандартный корпоративный стиль */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6f8fa;
+            color: #24292e;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.5;
         }
 
-        body {
-            background: #0f172a;
-            color: #f8fafc;
+        /* Шапка сайта */
+        header {
+            background-color: #24292e;
+            color: white;
+            padding: 15px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            max-width: 900px;
+            margin: 0 auto;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            min-height: 100vh;
-            text-align: center;
-        }
-
-        .container {
-            max-width: 600px;
-            padding: 40px 20px;
-            background: #1e293b;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            border: 2px solid #3b82f6;
         }
 
         .logo {
-            font-size: 70px;
-            margin-bottom: 20px;
-            animation: pulse 2s infinite;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
         }
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: #3b82f6;
+        /* Главный блок */
+        .main-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
 
-        p {
-            font-size: 1.1rem;
-            color: #94a3b8;
-            margin-bottom: 30px;
-            line-height: 1.6;
+        .download-card {
+            background: white;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
+        .info-block h1 {
+            margin: 0 0 10px 0;
+            font-size: 26px;
+            color: #0366d6;
+        }
+
+        .info-block p {
+            margin: 0;
+            color: #586069;
+            font-size: 15px;
+        }
+
+        /* Стандартная зелёная кнопка загрузки */
         .btn-download {
             display: inline-block;
-            background: #2563eb;
+            background-color: #2ea44f;
             color: white;
-            padding: 15px 40px;
-            font-size: 1.2rem;
-            font-weight: bold;
             text-decoration: none;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 6px;
+            border: 1px solid rgba(27,31,35,0.15);
+            box-shadow: 0 1px 0 rgba(27,31,35,0.1);
+            transition: background-color 0.2s;
         }
 
         .btn-download:hover {
-            background: #1d4ed8;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
+            background-color: #2c974b;
         }
 
-        .features {
-            margin-top: 40px;
-            display: flex;
-            justify-content: space-around;
-            border-top: 1px solid #334155;
-            padding-top: 20px;
+        /* Таблица с характеристиками файла */
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            background: white;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            overflow: hidden;
         }
 
-        .feature-item {
-            font-size: 0.9rem;
-            color: #64748b;
+        .specs-table th {
+            background-color: #f1f4f8;
+            text-align: left;
+            padding: 12px;
+            font-size: 14px;
+            color: #586069;
+            border-bottom: 1px solid #e1e4e8;
         }
 
-        .feature-item strong {
-            color: #cbd5e1;
-            display: block;
-            margin-bottom: 5px;
+        .specs-table td {
+            padding: 12px;
+            font-size: 14px;
+            border-bottom: 1px solid #e1e4e8;
         }
 
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
+        .specs-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Подвал */
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 20px;
+            font-size: 13px;
+            color: #6a737d;
+            border-top: 1px solid #e1e4e8;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Твой крутой хакерский логотип щита -->
-        <div class="logo">🛡️</div>
-        
-        <!-- Замени слово "Антивирус" на название своего файла! -->
-        <h1>CyberShield VirusFun</h1>
-        <p>Надежная защита твоего компьютера от вирусов, троянов и угроз. Быстрое сканирование, олдскульный классический установщик и максимальная скорость работы.</p>
-        
-        <!-- Кнопка скачивания. В href укажи имя своего exe-файла -->
-        <a href="virusfun.exe" class="btn-download" download>Скачать бесплатно</a>
+    <header>
+        <div class="header-container">
+            <div class="logo">VirusFun Software</div>
+        </div>
+    </header>
 
-        <div class="features">
-            <div class="feature-item">
-                <strong>Версия</strong>
-                1.0.0
+    <div class="main-container">
+        
+        <!-- Карточка скачивания -->
+        <div class="download-card">
+            <div class="info-block">
+                <h1>Скачать VirusFun для Windows</h1>
+                <p>Официальная стабильная версия установщика. Безопасная загрузка.</p>
             </div>
-            <div class="feature-item">
-                <strong>Интерфейс</strong>
-                Русский
-            </div>
-            <div class="feature-item">
-                <strong>Платформа</strong>
-                Windows
+            <div>
+                <!-- Кнопка скачивания -->
+                <a href="virusfun.exe" class="btn-download" download>Скачать (.exe)</a>
             </div>
         </div>
+
+        <!-- Таблица информации (как на всех проф. сайтах) -->
+        <table class="specs-table">
+            <thead>
+                <tr>
+                    <th colspan="2">Информация о релизе</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Название файла:</strong></td>
+                    <td>virusfun.exe</td>
+                </tr>
+                <tr>
+                    <td><strong>Платформа:</strong></td>
+                    <td>Windows 10 / 11 (64-bit)</td>
+                </tr>
+                <tr>
+                    <td><strong>Тип лицензии:</strong></td>
+                    <td>Закрытая (All Rights Reserved)</td>
+                </tr>
+                <tr>
+                    <td><strong>Версия сборки:</strong></td>
+                    <td>1.0.0 (Создано в Inno Setup)</td>
+                </tr>
+            </tbody>
+        </table>
+
     </div>
+
+    <footer>
+        &copy; 2026 VirusFun. Все права защищены.
+    </footer>
 
 </body>
 </html>
