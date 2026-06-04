@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Скачать Мой Антивирус</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 40px 20px;
+            background: #1e293b;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 2px solid #3b82f6;
+        }
+
+        .logo {
+            font-size: 70px;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #3b82f6;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .btn-download {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn-download:hover {
+            background: #1d4ed8;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
+        }
+
+        .features {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-around;
+            border-top: 1px solid #334155;
+            padding-top: 20px;
+        }
+
+        .feature-item {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        .feature-item strong {
+            color: #cbd5e1;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Твой крутой хакерский логотип щита -->
+        <div class="logo">🛡️</div>
+        
+        <!-- Замени слово "Антивирус" на название своего файла! -->
+        <h1>CyberShield VirusFun</h1>
+        <p>Надежная защита твоего компьютера от вирусов, троянов и угроз. Быстрое сканирование, олдскульный классический установщик и максимальная скорость работы.</p>
+        
+        <!-- Кнопка скачивания. В href укажи имя своего exe-файла -->
+        <a href="virusfun.exe" class="btn-download" download>Скачать бесплатно</a>
+
+        <div class="features">
+            <div class="feature-item">
+                <strong>Версия</strong>
+                1.0.0
+            </div>
+            <div class="feature-item">
+                <strong>Интерфейс</strong>
+                Русский
+            </div>
+            <div class="feature-item">
+                <strong>Платформа</strong>
+                Windows
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
